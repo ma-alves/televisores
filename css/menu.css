@@ -1,0 +1,19 @@
+﻿.menu_global {
+    text-align: center;
+    line-height: 2px;
+}
+
+.menu_global li {
+    display: inline-flex;
+    margin: 10px;
+}
+
+.menu_global a {
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+}
+
+.menu_global a:hover {
+    color: rgb(73, 23, 209);
+    transition: ease 0.5s;
+}

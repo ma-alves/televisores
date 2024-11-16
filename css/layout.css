@@ -1,0 +1,22 @@
+﻿#principal {
+	margin: 20px 40px 10px 40px;
+	color: rgb(27, 27, 27);
+}
+
+.header {
+    text-align: center;
+	font-size: 20px;
+}
+
+#middle {	
+	color: rgb(27, 27, 27);
+    font-size: 20pt;
+    padding: 60px 0 60px 0;
+    text-align: center;
+}
+
+footer {
+	padding: 5px;
+	margin: auto 150px auto 150px;
+	text-align: center;
+}
