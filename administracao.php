@@ -20,13 +20,13 @@
 			</div>
             <hr>
 			<div class="menu_global">
-                <!-- <p align="right"> Olá <?php include "valida_login.php"; ?> </p> -->
+                <p align="center"> Olá, <?php include "valida_login.php"; ?>! </p>
                 <?php include "menu_local.php"; ?>
 			</div>
-			<div id="middle">
+			<div class="middle">
 				<h1>ADMINISTRAÇÃO</h1>
 				<p>
-					Seja bem-vindo ao sistema de controle de estoque e venda de televisores da Tever Store
+					Bem vindo ao sistema de controle de estoque e venda de televisores da Tever Store.
 				</p>
 			</div>
             <hr>

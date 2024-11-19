@@ -16,7 +16,7 @@
 				<h1>Tever Store</h1>
 			</div>
 			<hr>
-			<div id="middle">
+			<div class="middle">
 				<h1>ACESSO À ÁREA RESTRITA</h1>
 				<form method="post" action="processa_login.php">
 					<p>

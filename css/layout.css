@@ -1,6 +1,6 @@
 ﻿#principal {
 	margin: 20px 40px 10px 40px;
-	color: rgb(27, 27, 27);
+	color: rgb(39, 39, 39);
 }
 
 .header {
@@ -8,10 +8,17 @@
 	font-size: 20px;
 }
 
-#middle {	
-	color: rgb(27, 27, 27);
-    font-size: 20pt;
-    padding: 60px 0 60px 0;
+.middle {
+	color: rgb(39, 39, 39);
+    font-size: 24px;
+    padding: 30px 0 60px 0;
+    text-align: center;
+}
+
+.middle-list {
+	color: rgb(39, 39, 39);
+    font-size: 14px;
+    padding: 30px 0 60px 0;
     text-align: center;
 }
 

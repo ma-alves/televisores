@@ -4,10 +4,10 @@
 <ul>
 	<li><a href="administracao.php" class="active">Administração</a></li>
 	<li><a href="lista_fun.php" class="active">Funcionários</a></li>
-	<li><a href="lista_amp.php">Amplificadores</a></li>
+	<li><a href="lista_tel.php">Televisores</a></li>
 	<li><a href="vendas.php">Vendas</a></li>    
 	<li><a href="relatorios.php">Relatorios</a></li>
-	<li><a href="logout.php" class="active">Sair</a></li>	
+	<li><a href="logout.php" class="active">Sair</a></li>
 </ul> 
 <?php
 	}
@@ -15,7 +15,7 @@
 ?>
 <ul>
 	<li><a href="administracao.php" class="active">Administração</a></li>
-	<li><a href="lista_amp.php">Amplificadores</a></li>	
+	<li><a href="lista_tel.php">Televisores</a></li>	
 	<li><a href="logout.php" class="active">Sair</a></li>
 </ul> 
 <?php		
@@ -24,7 +24,7 @@
 ?>
 <ul>
 	<li><a href="administracao.php" class="active">Administração</a></li>
-	<li><a href="vendas.php">Vendas</a></li>   
+	<li><a href="vendas.php">Vendas</a></li>
 	<li><a href="logout.php" class="active">Sair</a></li>
 </ul> 
 <?php		
