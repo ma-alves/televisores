@@ -23,7 +23,7 @@
                 <p align="center"> Olá, <?php include "valida_login.php"; ?>!</p>
                 <?php include "menu_local.php"; ?>
 			</div>
-			<div class="middle-list">
+			<div class="middle">
 				<h1 style="font-size: 40px;">RELATÓRIOS</h1>
                 <ul type="none" style="font-size: 20px;">
 					<li><a href="rel_funcionarios.php" class="active">Relatório de Funcionários</a></li>
