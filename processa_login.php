@@ -1,7 +1,7 @@
 <?php
 	session_start ();
 	
-	$conectar = mysqli_connect ("localhost", "root", "#senai0308", "televisores");
+	$conectar = mysqli_connect ("localhost", "root", "#senai0308", "tever");
 	
 	$login = $_POST["login"];
 	$senha = $_POST["senha"];	

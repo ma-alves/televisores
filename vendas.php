@@ -24,42 +24,37 @@
                 <?php include "menu_local.php"; ?>
 			</div>
 			<div class="middle-list">
-				<h1 style="font-size: 40px;">FUNCIONÁRIOS</h1>
-                <p align="right"><a href="cadastra_fun.php">Cadastro de funcionários</a></p>
+				<h1 style="font-size: 40px;">VENDAS</h1>
 				<?php
 					$conectar = mysqli_connect("localhost", "root", "#senai0308", "tever");
 					
-					$sql_consulta = "SELECT nome_fun, cpf_fun, usuario_fun, telefone_fun, 
-                    salario_fun, endereco_fun, data_nasc_fun, email_fun, status_fun, funcao_fun, cod_fun
-									 FROM funcionarios";
+					$sql_consulta = "SELECT marca_tel, modelo_tel, preco_tel, resolucao_tel, 
+                    conectividade_tel, streaming_tel, fila_compra_tel, cod_tel FROM televisores
+                    WHERE vendas_cod_venda = 0 AND fila_compra_tel = 'N'";
 									 
 					$sql_resultado = mysqli_query ($conectar, $sql_consulta);				 
 				?>
 				<table width="100%">
 							<tr height="50px">
-								<td><strong>NOME</strong></td>
-								<td><strong>CPF</strong></td>
-								<td><strong>USUÁRIO</strong></td>
-								<td><strong>TELEFONE</strong></td>
-								<td><strong>SALÁRIO</strong></td>
-								<td><strong>ENDEREÇO</strong></td>
-								<td><strong>NASCIMENTO</strong></td>
-								<td><strong>E-MAIL</strong></td>
-								<td><strong>STATUS</strong></td>
-								<td><strong>FUNÇÃO</strong></td>
-								<td><strong>AÇÃO</strong></td>
+								<td><strong>MARCA</strong></td>
+								<td><strong>MODELO</strong></td>
+								<td><strong>PREÇO</strong></td>
+								<td><strong>RESOLUÇÃO</strong></td>
+								<td><strong>CONECTIVIDADE</strong></td>
+								<td><strong>STREAMING</strong></td>
+								<td><strong>NA FILA</strong></td>
 							</tr>
 					<?php
 						while ($registro = mysqli_fetch_row($sql_resultado)) {
 					?>
 							<tr height="50px">
 								<td>
-									<a href="exibe_fun.php?codigo=<?php echo $registro[10]; ?>">
-										<?php echo $registro[0]; ?>
-									</a>	
+									<?php echo $registro[0]; ?>
 								</td>
 								<td>
-									<?php echo $registro[1]; ?>
+									<a href="exibe_tel.php?codigo=<?php echo $registro[7]; ?>">
+										<?php echo $registro[1]; ?>
+									</a>	
 								</td>
 								<td>
 									<?php echo $registro[2]; ?>
@@ -76,20 +71,11 @@
 								<td>
 									<?php echo $registro[6]; ?>
 								</td>
-								<td>
-									<?php echo $registro[7]; ?>
-								</td>
-								<td>
-									<?php echo $registro[8]; ?>
-								</td>
-								<td>
-									<?php echo $registro[9]; ?>
-								</td>
-								<td>
-									<a href="altera_fun.php?codigo=<?php echo $registro[10]; ?>">
-										Alterar
-									</a>
-								</td>
+                                <td class="direita">
+							        <a href="processa_fila_compras.php?codigo=<?php echo $registro[7]?>">
+								    Colocar na fila de compras	
+							        </a>
+						        </td>
 							</tr>
 					<?php		
 						}
