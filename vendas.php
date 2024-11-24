@@ -1,5 +1,7 @@
 <?php
 	session_start ();
+	$env = parse_ini_file('.env');
+    $senha_db = $env["SENHA_DB"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +28,7 @@
 			<div class="middle-list">
 				<h1 style="font-size: 40px;">VENDAS</h1>
 				<?php
-					$conectar = mysqli_connect("localhost", "root", "#senai0308", "tever");
+					$conectar = mysqli_connect("localhost", "root", $senha_db, "tever");
 					
 					$sql_consulta = "SELECT marca_tel, modelo_tel, preco_tel, resolucao_tel, 
                     conectividade_tel, streaming_tel, fila_compra_tel, cod_tel FROM televisores

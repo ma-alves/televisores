@@ -67,7 +67,7 @@
 							<td>
 								<p> 
 									<input type="radio" name="status_fun" value="ativo" checked>Ativo
-									<input type="radio" name="status_fun" value="nao_ativo">Não Ativo
+									<input type="radio" name="status_fun" value="inativo">Inativo
                                 </p>
 							</td>
 						</tr>

@@ -1,7 +1,9 @@
 <?php
 	session_start ();
+	$env = parse_ini_file('.env');
+    $senha_db = $env["SENHA_DB"];
 	
-	$conectar = mysqli_connect ("localhost", "root", "#senai0308", "tever");
+	$conectar = mysqli_connect ("localhost", "root", $senha_db, "tever");
 	
 	$login = $_POST["login"];
 	$senha = $_POST["senha"];	

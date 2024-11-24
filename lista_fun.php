@@ -1,5 +1,7 @@
 <?php
 	session_start ();
+	$env = parse_ini_file('.env');
+    $senha_db = $env["SENHA_DB"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +29,7 @@
 				<h1 style="font-size: 40px;">FUNCIONÁRIOS</h1>
                 <p align="right"><a href="cadastra_fun.php">Cadastro de funcionários</a></p>
 				<?php
-					$conectar = mysqli_connect("localhost", "root", "#senai0308", "tever");
+					$conectar = mysqli_connect("localhost", "root", $senha_db, "tever");
 					
 					$sql_consulta = "SELECT nome_fun, cpf_fun, usuario_fun, telefone_fun, 
                     salario_fun, endereco_fun, data_nasc_fun, email_fun, status_fun, funcao_fun, cod_fun
@@ -54,7 +56,7 @@
 					?>
 							<tr height="50px">
 								<td>
-									<a href="exibe_fun.php?codigo=<?php echo $registro[10]; ?>">
+									<a href="exibe_fun.php?cod_fun=<?php echo $registro[10]; ?>">
 										<?php echo $registro[0]; ?>
 									</a>	
 								</td>
@@ -86,7 +88,7 @@
 									<?php echo $registro[9]; ?>
 								</td>
 								<td>
-									<a href="altera_fun.php?codigo=<?php echo $registro[10]; ?>">
+									<a href="altera_fun.php?cod_fun=<?php echo $registro[10]; ?>">
 										Alterar
 									</a>
 								</td>

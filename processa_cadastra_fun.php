@@ -1,8 +1,11 @@
 <?php
-	$conectar = mysqli_connect ("localhost", "root", "#senai0308", "tever");
+    $env = parse_ini_file('.env');
+    $senha_db = $env["SENHA_DB"];
+
+	$conectar = mysqli_connect ("localhost", "root", $senha_db, "tever");
 	
-	$nome_fun = $_POST["nome"];
-    $cpf_fun = $_POST["cpf"];
+	$nome_fun = $_POST["nome_fun"];
+    $cpf_fun = $_POST["cpf_fun"];
 	$usuario_fun = $_POST["usuario_fun"];
 	$senha_fun = $_POST["senha_fun"];
 	$telefone_fun = $_POST["telefone_fun"];

@@ -1,5 +1,7 @@
 <?php
 	session_start ();
+	$env = parse_ini_file('.env');
+    $senha_db = $env["SENHA_DB"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +29,7 @@
 				<h1 style="font-size: 40px;">TELEVISORES</h1>
                 <p align="right"><a href="cadastra_tel.php">Cadastro de televisores</a></p>
 				<?php
-					$conectar = mysqli_connect("localhost", "root", "#senai0308", "tever");
+					$conectar = mysqli_connect("localhost", "root", $senha_db, "tever");
 					
 					$sql_consulta = "SELECT marca_tel, modelo_tel, preco_tel, resolucao_tel, 
                     conectividade_tel, streaming_tel, fila_compra_tel, cod_tel FROM televisores";
