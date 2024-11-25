@@ -51,16 +51,11 @@
 								  
 		$linhas = mysqli_num_rows($sql_resultado);		
 		if ($linhas == 1) {
-			// echo "<script> 
-			//            alert('Login do funcionário já existente. Tente de novo.')
-		    //       </script>";
 			echo "<script> 
 				location.href = ('altera_fun.php?cod_fun=$cod_fun')
 				  </script>";
 			exit;	  
-		}
-		else
-		{			
+		} else {			
 			$sql_altera = "UPDATE funcionarios 		
 						   SET
                                 nome_fun = '$nome_fun',
@@ -75,7 +70,9 @@
                                 status_fun = '$status_fun',
                                 funcao_fun = '$funcao_fun'
 						   WHERE cod_fun = '$cod_fun'";
-			$sql_resultado_alteracao = mysqli_query ($conectar, $sql_altera);		
+
+			$sql_resultado_alteracao = mysqli_query ($conectar, $sql_altera);
+				
 			if ($sql_resultado_alteracao == true) {
 				echo "<script>
 						alert('Funcionário alterado com sucesso')
@@ -86,7 +83,7 @@
 				exit();
 			} else {    
 				echo "<script> 
-						alert ('Ocorreu um erro no servidor. Tente novamente') 
+						alert ('Ocorreu um erro no servidor. Tente novamente.') 
 					</script>";
 				echo "<script> 
 						location.href ('altera_fun.php?cod_fun=<?php echo $cod_fun; ?>') 

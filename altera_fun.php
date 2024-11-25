@@ -26,7 +26,7 @@
                 <?php include "menu_local.php"; ?>
 			</div>
 			<div class="middle">
-            <?php
+            	<?php
 					$conectar = mysqli_connect ("localhost", "root", $senha_db, "tever");
 					
 					$cod_fun = $_GET["cod_fun"];
