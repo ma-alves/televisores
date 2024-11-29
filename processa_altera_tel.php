@@ -2,7 +2,7 @@
     $env = parse_ini_file('.env');
     $senha_db = $env["SENHA_DB"];
 
-	$conectar = mysqli_connect ("localhost", "root", $senha_db, "tever");
+	$conectar = mysqli_connect("localhost", "root", $senha_db, "tever");
 				
 	$marca_tel = $_POST["marca_tel"];
     $modelo_tel = $_POST["modelo_tel"];
@@ -27,9 +27,10 @@
                     WHERE cod_tel = '$cod_tel'";
 							  
 	$sql_resultado_alteracao = mysqli_query($conectar, $sql_altera);
+
 	if ($sql_resultado_alteracao == true) {
 		echo "<script>
-				alert('Televisor alterado com sucesso')
+				alert('Televisor alterado com sucesso.')
 			  </script>";
 		echo "<script> 
 				 location.href = ('lista_tel.php') 

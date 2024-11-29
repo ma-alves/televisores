@@ -71,13 +71,13 @@
 						</p>
 						<p> 
 							Streaming:
-                            <input type="radio" name="streaming_tel" value="s" checked>Sim
-                            <input type="radio" name="streaming_tel" value="n">Não
+                            <input type="radio" name="streaming_tel" value="S" checked>Sim
+                            <input type="radio" name="streaming_tel" value="N">Não
 						</p>
 						<p> 
 							Na fila de compras:
-                            <input type="radio" name="fila_compra_tel" value="s" checked>Sim
-                            <input type="radio" name="fila_compra_tel" value="n">Não 
+                            <input type="radio" name="fila_compra_tel" value="S" checked>Sim
+                            <input type="radio" name="fila_compra_tel" value="N">Não 
 						</p>
 						<p> 
 							Código de Venda: 

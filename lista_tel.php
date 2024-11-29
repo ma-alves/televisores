@@ -59,7 +59,7 @@
 									</a>	
 								</td>
 								<td>
-									<?php echo $registro[2]; ?>
+									R$<?php echo $registro[2]; ?>
 								</td>
 								<td>
 									<?php echo $registro[3]; ?>

@@ -33,7 +33,7 @@
                     $cod_tel = $_GET["cod_tel"];
 
 					$sql_consulta = "SELECT marca_tel, modelo_tel, preco_tel, resolucao_tel, 
-                    conectividade_tel, streaming_tel, fila_compra_tel, cod_tel FROM televisores";
+                    conectividade_tel, streaming_tel, fila_compra_tel FROM televisores WHERE cod_tel = $cod_tel";
 									 
 					$sql_resultado = mysqli_query ($conectar, $sql_consulta);
                     

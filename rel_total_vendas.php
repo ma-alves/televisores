@@ -1,5 +1,7 @@
 <?php
 	session_start ();
+	$env = parse_ini_file('.env');
+    $senha_db = $env["SENHA_DB"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,15 +25,25 @@
                 <p align="center"> Olá, <?php include "valida_login.php"; ?>!</p>
                 <?php include "menu_local.php"; ?>
 			</div>
-			<div class="middle">
-				<h1 style="font-size: 40px;">RELATÓRIOS</h1>
-                <ul type="none" style="font-size: 20px;">
-					<li><a href="rel_funcionarios.php" class="active">Relatório de Funcionários</a></li>
-					<br>
-					<li><a href="rel_estoque.php">Relatório de Televisores em Estoque</a></li>
-					<br>
-					<li><a href="rel_total_vendas.php" class="active">Faturamento Total do Mês</a></li>				
-				</ul> 
+			<div class="middle-list">
+				<h1 style="font-size: 40px;">RELATÓRIO DE TOTAL DE VENDAS</h1>
+				<?php
+					$conectar = mysqli_connect("localhost", "root", $senha_db, "tever");
+
+                    $data = date('d/m/Y');
+					
+					$sql_consulta_total_de_vendas = "SELECT preco_tel FROM televisores 
+                                                     WHERE fila_compra_tel = 'S'";
+									 
+					$sql_resultado = mysqli_query ($conectar, $sql_consulta_total_de_vendas);
+
+                    $valor_total = 0;
+                    while ($registro_total_vendas = mysqli_fetch_row ($sql_resultado)) {
+						$valor_total = $valor_total + $registro_total_vendas[0];
+					}
+				?>
+                <p style="font-size: 30px;">Total de vendas até hoje: R$<?php echo $valor_total; ?>
+                <p><a href="relatorios.php">Voltar</a></p>
 			</div>
             <hr>
 			<footer>
